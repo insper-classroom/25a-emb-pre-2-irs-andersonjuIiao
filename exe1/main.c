@@ -23,14 +23,14 @@ int main() {
   gpio_set_irq_enabled_with_callback(
     BTN_PIN_R, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &btn_callback);
     
-    while (true) {
-      if(btn_flag == 1){
-        printf("fall \n");
-        btn_flag = -1;
-      }
-      else if (btn_flag == 0){
-        printf("rise \n");
-        btn_flag = -1;
-      }
+  while (true) {
+    if(btn_flag == 1){
+      printf("fall \n");
+      btn_flag = -1;
     }
+    else if (btn_flag == 0){
+      printf("rise \n");
+      btn_flag = -1;
+    }
+  }
 }
