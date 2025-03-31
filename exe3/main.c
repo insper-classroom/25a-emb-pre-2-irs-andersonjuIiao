@@ -4,8 +4,8 @@
 
 const int BTN_PIN_R = 28;
 const int BTN_PIN_G = 26;
-int btn_flag_r = 0;
-int btn_flag_g = 0;
+volatile btn_flag_r = 0;
+volatile btn_flag_g = 0;
 
 
 void btn_callback(uint gpio, uint32_t events) {
